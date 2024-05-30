@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Report</title>
+</head>
+<body>
+    <h1>Report for {{ client.first_name }} {{ client.last_name }}</h1>
+    <p>Date of Birth: {{ client.date_of_birth }}</p>
+    <h2>Visits</h2>
+    <ul>
+        {% for visit in visits %}
+            <li>{{ visit.visit_date }}: {{ visit.note }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
